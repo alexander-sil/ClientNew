@@ -417,15 +417,18 @@ namespace Client.Logic
 
         public static void ShowDeleteDialog()
         {
-            _DeleteDialog.Add(_DeleteDialogIdField);
+            _DeleteDialogIdField.MouseEnter += ((MouseEventArgs e) => _DeleteDialogIdField.SetFocus());
 
+            _DeleteDialogYesButton.MouseEnter += ((MouseEventArgs e) => _DeleteDialogYesButton.SetFocus());
+            _DeleteDialogNoButton.MouseEnter += ((MouseEventArgs e) => _DeleteDialogNoButton.SetFocus());
+
+            _DeleteDialog.Add(_DeleteDialogIdField);
             _DeleteDialog.Add(_DeleteDialogIdLabel);
 
             _DeleteDialog.Add(_DeleteDialogYesButton);
             _DeleteDialog.Add(_DeleteDialogNoButton);
 
             WindowLogic.window.Add(_DeleteDialog);
-
 
             _DeleteDialogYesButton.Clicked += ShowDeleteDialogYes;
             _DeleteDialogNoButton.Clicked += ShowDeleteDialogNo;
@@ -595,11 +598,11 @@ namespace Client.Logic
 
             _BorrowerNameUpdateDialog.Add(_BorrowerNameUpdateDialogIdField);
             _BorrowerNameUpdateDialog.Add(_BorrowerNameUpdateDialogExpressionField);
-            _NewBorrowerBindDialog.Add(_BorrowerNameUpdateDialogNameField);
+            _BorrowerNameUpdateDialog.Add(_BorrowerNameUpdateDialogNameField);
 
             _BorrowerNameUpdateDialog.Add(_BorrowerNameUpdateDialogEntryIdLabel);
             _BorrowerNameUpdateDialog.Add(_BorrowerNameUpdateDialogExpressionLabel);
-            _NewBorrowerBindDialog.Add(_BorrowerNameUpdateDialogNameLabel);
+            _BorrowerNameUpdateDialog.Add(_BorrowerNameUpdateDialogNameLabel);
 
             _BorrowerNameUpdateDialog.Add(_BorrowerNameUpdateDialogYesButton);
             _BorrowerNameUpdateDialog.Add(_BorrowerNameUpdateDialogNoButton);
@@ -695,9 +698,9 @@ namespace Client.Logic
             _BorrowerClassUpdateDialog.Add(_BorrowerClassUpdateDialogExpressionField);
             _BorrowerClassUpdateDialog.Add(_BorrowerClassUpdateDialogClassField);
 
-            _BorrowerClassUpdateDialog.Add(_BorrowerClassUpdateDialogIdField);
-            _BorrowerClassUpdateDialog.Add(_BorrowerClassUpdateDialogExpressionField);
-            _BorrowerClassUpdateDialog.Add(_BorrowerClassUpdateDialogClassField);
+            _BorrowerClassUpdateDialog.Add(_BorrowerClassUpdateDialogEntryIdLabel);
+            _BorrowerClassUpdateDialog.Add(_BorrowerClassUpdateDialogExpressionLabel);
+            _BorrowerClassUpdateDialog.Add(_BorrowerClassUpdateDialogClassLabel);
 
             _BorrowerClassUpdateDialog.Add(_BorrowerClassUpdateDialogYesButton);
             _BorrowerClassUpdateDialog.Add(_BorrowerClassUpdateDialogNoButton);
@@ -784,16 +787,16 @@ namespace Client.Logic
             _BorrowerBuildingUpdateDialogExpressionField.MouseEnter += ((MouseEventArgs e) => _BorrowerBuildingUpdateDialogExpressionField.SetFocus());
             _BorrowerBuildingUpdateDialogBuildingField.MouseEnter += ((MouseEventArgs e) => _BorrowerBuildingUpdateDialogBuildingField.SetFocus());
 
-            _BorrowerBuildingUpdateDialogYesButton.MouseEnter += ((MouseEventArgs e) => _BorrowerClassUpdateDialogYesButton.SetFocus());
-            _BorrowerBuildingUpdateDialogNoButton.MouseEnter += ((MouseEventArgs e) => _BorrowerClassUpdateDialogNoButton.SetFocus());
+            _BorrowerBuildingUpdateDialogYesButton.MouseEnter += ((MouseEventArgs e) => _BorrowerBuildingUpdateDialogYesButton.SetFocus());
+            _BorrowerBuildingUpdateDialogNoButton.MouseEnter += ((MouseEventArgs e) => _BorrowerBuildingUpdateDialogNoButton.SetFocus());
 
             _BorrowerBuildingUpdateDialog.Add(_BorrowerBuildingUpdateDialogIdField);
             _BorrowerBuildingUpdateDialog.Add(_BorrowerBuildingUpdateDialogExpressionField);
             _BorrowerBuildingUpdateDialog.Add(_BorrowerBuildingUpdateDialogBuildingField);
 
-            _BorrowerClassUpdateDialog.Add(_BorrowerBuildingUpdateDialogIdField);
-            _BorrowerClassUpdateDialog.Add(_BorrowerBuildingUpdateDialogExpressionField);
-            _BorrowerClassUpdateDialog.Add(_BorrowerBuildingUpdateDialogBuildingField);
+            _BorrowerBuildingUpdateDialog.Add(_BorrowerBuildingUpdateDialogEntryIdLabel);
+            _BorrowerBuildingUpdateDialog.Add(_BorrowerBuildingUpdateDialogExpressionLabel);
+            _BorrowerBuildingUpdateDialog.Add(_BorrowerBuildingUpdateDialogBuildingLabel);
 
             _BorrowerBuildingUpdateDialog.Add(_BorrowerBuildingUpdateDialogYesButton);
             _BorrowerBuildingUpdateDialog.Add(_BorrowerBuildingUpdateDialogNoButton);
